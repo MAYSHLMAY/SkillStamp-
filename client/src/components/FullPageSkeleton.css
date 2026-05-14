@@ -1,0 +1,61 @@
+.fps {
+  min-height: 100vh;
+  background: var(--bg-base);
+  padding: 0 16px 48px;
+}
+
+@media (min-width: 900px) {
+  .fps {
+    padding: 0 24px 64px;
+  }
+}
+
+.fps__nav {
+  height: 64px;
+  border-radius: var(--radius-md);
+  margin: 12px 0 24px;
+}
+
+.fps__hero {
+  height: 220px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+}
+
+.fps__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .fps__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .fps__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fps__card {
+  height: 200px;
+  border-radius: var(--radius-md);
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--bg-card) 25%, #1e1e2e 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
